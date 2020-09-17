@@ -1,0 +1,306 @@
+/* -----------------------------------------------------------------------
+
+ MagicMail Server CSS (2.1)
+ Component: Spam Management
+ http://magicmail.linuxmagic.com/
+
+ Copyright: 2010 Wizard IT Services, All Rights Reserved
+ All style attributes in alpha-numeric order starting from 0
+
+----------------------------------------------------------------------- */
+
+/* Requires the mm_modal CSS, not sure the effect on webmail, shared base? */
+
+@import "modal.css";
+/* Webmail Rewrites */
+
+.right {
+    float: none
+}
+
+#signout_button {
+    text-align: right
+}
+
+#spam_form {
+    padding-left: 15px;
+}
+
+#spam_form .SpamManagement {
+    margin: 10px 0 0
+}
+
+.SpamHeader {
+    margin: 0 0 6px
+}
+
+.SpamError.success,
+.SpamError.error {
+    width: 590px
+}
+
+.SpamManagement {
+    width: 600px
+}
+
+.AntiSpamProtection {
+    margin: 0 0 8px 0;
+    position: relative;
+    width: 100%;
+}
+
+.AntiSpamProtection h2 {
+    font-size: 16px;
+    text-align: left;
+}
+
+.AntiSpamProtection h3 {
+    font-size: 14px;
+    text-align: left;
+}
+
+.CustomRule {
+    border: 1px solid #CECECE;
+    border-bottom: 0;
+}
+
+.BlockSpot {
+    border: 1px solid #CECECE;
+    border-bottom: 0;
+}
+
+.EditSpamLists h2,
+.CustomRule h2,
+.BlockSpot h2 {
+    background: #EEE;
+    border-bottom: 1px solid #CECECE;
+    clear: both;
+    color: #000;
+    font-size: 14px;
+    margin: 0;
+    padding: 2px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.AntiSpamProtection .Description {
+    color: #424242;
+    margin: 10px 0px;
+    text-align: justify;
+}
+
+.AntiSpamProtection .SpamStatus {
+    margin: 0 20px 0 0;
+    padding: 20px 0 0 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: 200px;
+}
+
+.AntiSpamProtection .SpamStatus a {
+    display: block;
+    height: 45px;
+    outline: none;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    width: 164px;
+}
+
+.AntiSpamProtection .SpamStatus a:hover {
+    color: #000;
+    filter: alpha(opacity=80);
+    opacity: 0.8;
+}
+
+.AntiSpamProtection .SpamStatus small {
+    color: #535353;
+    font-size: 11px;
+    font-weight: normal;
+    text-transform: lowercase;
+}
+
+.AntiSpamProtection .SpamTypes {
+    border: 1px solid #CECECE;
+    border-bottom: 0;
+    margin: 0 0 0 0px;
+    overflow: auto;
+    width: 320px;
+    font-family: arial;
+}
+
+.AntiSpamProtection .SpamType,
+.CustomRule .SpamOption,
+.BlockSpot .nav {
+    border-bottom: 1px solid #CCC;
+    clear: both;
+    font-size: 12px;
+    height: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.AntiSpamProtection .SpamType {
+    height: auto;
+}
+
+.AntiSpamProtection .SpamType li,
+.CustomRule .SpamOption li,
+.BlockSpot .nav li {
+    display: inline;
+    line-height: 30px;
+    font-size: 12px;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.AntiSpamProtection .SpamType li {
+    width: 230px;
+}
+
+.AntiSpamProtection .SpamType li.radio,
+.CustomRule .SpamOption li.radio,
+.BlockSpot .nav li.radio {
+    height: 20px;
+    padding-top: 2px;
+    padding-left: 5px;
+    width: 20px;
+}
+
+.AntiSpamProtection .SpamType>li.radio,
+.CustomRule .SpamOption>li.radio,
+.BlockSpot .nav>li.radio {
+    height: 16px;
+    padding-top: 4px;
+}
+
+.AntiSpamProtection .SpamType li.helpicon,
+.CustomRule .SpamOption li.helpicon,
+.BlockSpot .nav li.helpicon,
+.BlockSpot .nav li.listicon {
+    float: right;
+    line-height: 0;
+    padding: 4px 8px 0 0;
+    width: 20px;
+}
+
+.BlockSpot .nav li.listicon {
+    padding-right: 0;
+}
+
+.AntiSpamProtection .SpamType a:hover {
+    filter: alpha(opacity=80);
+    opacity: 0.8;
+}
+
+.AntiSpamProtection .HelpInfo img {
+    margin: -8px 0 0 0;
+}
+
+.EditSpamLists,
+.CustomRule,
+.BlockSpot {
+    border-bottom: 1px solid #ADADAD;
+    border-top: 1px solid #ADADAD;
+    margin: 8px 0;
+    padding: 0;
+    text-align: left;
+}
+
+.EditSpamLists {
+    border-bottom: 0;
+    border-left: 1px solid #ADADAD;
+    border-right: 1px solid #ADADAD;
+    margin: 10px 0px;
+    font-family: arial;
+}
+
+#spam-rules-form {
+    margin: 10px 20px;
+}
+
+.CustomRule a {
+    font-size: 10px;
+    text-decoration: none;
+}
+
+.BlockSpot .nav #image_sr_ip_whitelist,
+.BlockSpot .nav #image_sr_ip_blacklist,
+.BlockSpot .nav #image_sr_country_blacklist {
+    margin-right: 4px;
+}
+
+.BlockSpot .section h2 {
+    border-top: 1px solid #A2A2A2;
+}
+
+.SpamList {
+    border-bottom: 1px solid #9C9C9C;
+    font-size: 12px;
+    margin: 2px 0;
+    padding: 6px 0;
+    width: 100%
+}
+
+.SpamList a.SpamListLink {
+    color: #000;
+    margin: 0 0 0 20px;
+    text-decoration: none;
+}
+
+.SpamList a.SpamListLink:hover {
+    color: #444;
+}
+
+.SpamList a.SpamListLink .listicon {
+    border: 0;
+    margin: -6px 4px 0 0;
+}
+
+.SpamList .helpicon {
+    float: right;
+    margin: 0 8px 0 0;
+}
+
+.HelpInfo {
+    color: #666;
+    font-size: 11px;
+    margin: 4px 0 20px 0;
+    text-align: center;
+    width: 600px;
+}
+
+.HelpInfo img {
+    margin: -8px 0 0
+}
+
+div#per_domain_management_mention h3 {
+    margin: 0 0 0 10px;
+}
+
+div#per_domain_management_mention p {
+    margin: 10px 0 0 20px;
+}
+
+.helpicon.spamListBehaviour {
+    float: right;
+    margin: -18px 8px 0px 0px;
+}
+
+.spamlist .description {
+    padding: 8px;
+    margin: 0px;
+}
+
+table.SpamList {
+    border: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+table.SpamList tr td {
+    text-align: center;
+}

@@ -1,0 +1,1742 @@
+/*
+ * Cascading Style Sheet (CSS 467) for MagicMail Seven (Default MagicMail Webmail Theme)
+ * Author: Evgueni Naverniouk, evgueni@linuxmagic.com, http://www.linuxmagic.com/
+ * COPYRIGHT INFORMATION - DO NOT REMOVE
+ * Copyright (c) 2007 LinuxMagic Inc. All Rights Reserved.
+ *
+ * All style attributes in alpha-numeric order starting from 0
+ */
+
+/* 
+ * ========================================
+ * Global Elements and General Styles
+ * ========================================
+ */
+
+html,
+body {
+    color: #000;
+    font-family: Verdana, Arial, Helvetica, Tahoma, sans-serif;
+    font-size: 11px;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+/* Left Frame */
+
+body.left {
+    background: #2971B5 url(../images/background-sidebar.gif') no-repeat left 110px;
+    text-align: center;
+    /* IE Fix */
+}
+
+/* Right Frame */
+
+body.right {
+    background: #FFF url('../images/background-topheader.gif') repeat-x;
+    /* IE Fix */
+    margin: 0;
+    padding: 0;
+}
+
+/* Spacers inserted by SquirrelMail code */
+
+.hideme,
+br.line-break {
+    display: none;
+    font-size: 0px;
+}
+
+frame {
+    border: 0;
+}
+
+small {
+    font-size: 10pt;
+}
+
+pre {
+    font-size: 9px;
+}
+
+a:link,
+a:visited,
+a:active {
+    color: #04446C;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+}
+
+textarea {
+    background-color: #FDFCFA;
+    border: 1px solid #AAA;
+    color: #000;
+    font-size: 10pt;
+}
+
+td {
+    font-size: 11px;
+}
+
+select {
+    background: #F9F9F9;
+    border: 1px solid #999;
+    font-size: 10pt;
+    padding: 1px;
+}
+
+/* 
+ * ========================================
+ * Header Elements
+ * ========================================
+ */
+
+/* Hides the company text name defined in the config file */
+
+.company_text {
+    display: none;
+}
+
+/*Main Header Container */
+
+tr.main_header_bar {
+    background: transparent url('../images/background-topheader.gif') repeat-x;
+    height: 91px !important;
+}
+
+/* Top header Inbox/Compose/Addresses/Folders/Options buttons */
+
+#inbox_button,
+#compose_button,
+#addresses_button,
+#folders_button,
+#options_button {
+    background-repeat: no-repeat;
+    background-position: top center;
+    border-right: 1px solid #BDBEBD;
+    float: left;
+    height: 90px;
+    margin: 0;
+    opacity: 0.8;
+    padding: 0;
+    text-align: center;
+    width: 80px;
+}
+
+#inbox_button {
+    background-image: url(../images/button-inbox.gif);
+}
+
+#compose_button {
+    background-image: url(../images/button-compose.gif);
+}
+
+#addresses_button {
+    background-image: url(../images/button-addresses.gif);
+}
+
+#folders_button {
+    background-image: url(../images/button-folders.gif);
+}
+
+#options_button {
+    background-image: url(../images/button-options.gif);
+}
+
+/* Top header button text */
+
+p.button_text {
+    color: #000;
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    margin: 68px 0px 0px 0px;
+    text-align: center;
+    text-decoration: none;
+    width: 80px;
+}
+
+/* Top header button text MouseOvers*/
+
+div:hover#inbox_button p.button_text,
+div:hover#compose_button p.button_text,
+div:hover#addresses_button p.button_text,
+div:hover#folders_button p.button_text,
+div:hover#options_button p.button_text {
+    color: #2951A6 !important;
+}
+
+/* Inbox button*/
+
+#inbox_button p.button_text {
+    font-weight: bold;
+}
+
+/* This is the background for the logo displayed in the top right corner
+ * To change the actual logo, modify the file themes/skins/yourtheme/linuxmagic_logo.gif*/
+
+.right_logo {
+    background: transparent url('../images/linuxmagic_logo.gif') no-repeat bottom right;
+    margin: 0;
+    padding: 0;
+}
+
+/* Corrects the inconsistent theme header heights */
+
+/* This is required only if you are using more than one custom theme per server */
+
+.right_logo div img {
+    display: none;
+}
+
+/* Submenu */
+
+.inbox_bar_header,
+.inbox_bar_header_icons {
+    background: transparent url('../images/background-bottomheader.gif') repeat-x bottom left;
+    border-bottom: 1px solid #4A4D4A;
+    font-size: 10px;
+    height: 24px;
+}
+
+/* Calendar/Help/Search Submenu Buttons */
+
+#calendar_button,
+#help_button,
+#search_button {
+    color: #FFF;
+    cursor: pointer;
+    cursor: hand;
+    /* IE Fix */
+    float: right;
+    font-size: 11px;
+    margin: 0;
+    padding: 0px 16px 2px 0px;
+}
+
+/*Submenu "Current Folder" text */
+
+.inbox_bar_header {
+    color: #FFF;
+    padding-left: 10px;
+}
+
+/* Any additional submenu items (for plugins) */
+
+.inbox_bar_header a,
+.inbox_bar_header_icons a {
+    color: #FFF;
+}
+
+/* Submenu Button Mouseovers */
+
+#calendar_button span:hover,
+#help_button span:hover,
+#search_button span:hover,
+.inbox_bar_header a:hover,
+.inbox_bar_header_icons a:hover {
+    color: #FFD718 !important;
+}
+
+/* Turns the Calender/Help/Search buttons into blocks */
+
+#calendar_button span,
+#help_button span,
+#search_button span {
+    display: block !important;
+}
+
+/* Hides Spacers */
+
+#calendar_button span.hideme,
+#help_button span.hideme,
+#search_button span.hideme {
+    display: none !important;
+}
+
+/* Old SquirrelMail spacing, keep this hidden */
+
+.inbox_left_bar_handle {
+    display: none;
+}
+
+/* The "Logged in as" menu */
+
+.top_bar_header,
+.top_left_bar_handle {
+    background: url('../images/logged_in_as_bar_background.gif') repeat-x top left;
+    border-bottom: 1px solid #CCC;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px;
+}
+
+/* "Logged in as" text */
+
+.top_bar_header strong {
+    color: #2951A6;
+    padding-right: 5px;
+}
+
+/* "Sign Out" text */
+
+.top_bar_header b {
+    color: #000;
+    font-size: 11px;
+    padding-right: 12px;
+}
+
+/* 
+ * ========================================
+ * Side Bar Elements
+ * ========================================
+ */
+
+/* This is the background for the logo displayed in the top left corner
+ * To change the actual logo, modify the file images/custom/magicmailseven/small_org_logo.gif*/
+
+#left_logo {
+    background: #185584 url('../images/sidebar-logo.gif') repeat-x top left;
+    float: none;
+    height: 91px;
+    margin: 0px;
+    text-align: left;
+}
+
+/* Enable this to hide the MagicMail logo */
+
+/*
+#left_logo img{
+	display: none;
+}*/
+
+/* Extension of the Submenu for the Reload button */
+
+#folders_top {
+    background: transparent url('../images/background-bottomheader.gif') repeat-x top right;
+    border-bottom: 1px solid #4D4A4D;
+    float: left;
+    height: 23px;
+    padding: 0;
+    width: 240px;
+}
+
+/* Fix for Firefox*/
+
+body.left>#folders_top {
+    width: 100%;
+}
+
+/* Controls the Refresh button
+ * To change the actual button, modify the file images/custom/magicmailseven/refresh.gif 
+ * Set font-size:11px to display "Folders" text
+ *
+ * NOTE:
+ * Konqueror will already have this displayed (so you only need to change the color) */
+
+#folders_top p {
+    color: #5A5D5A;
+    /* Konqueror Temp Hide */
+    font-size: 0px;
+    margin: 2px 0px 0px 20px;
+    text-align: left;
+}
+
+/* Container for the email folders menu */
+
+#folders {
+    float: left;
+    width: 100%;
+}
+
+/* More containers for the email folders menu */
+
+/* NOTE: This should be removed in an upcoming MagicMail version */
+
+#folders table,
+#folders table td,
+#folders table div,
+#folders table div span {
+    width: 100%;
+}
+
+/* IE Fix for folder spacing*/
+
+#folders table div span {
+    margin: -2px;
+}
+
+#folders table div span.subfolder {
+    margin: 0;
+    padding-bottom: 2px;
+}
+
+#folders table>tbody>tr>td>div {
+    /*	overflow: hidden;*/
+}
+
+/* Folder buttons image */
+
+#folders span img.mbox_img {
+    margin: 0px 10px 4px 20px;
+}
+
+/* Folder menu spacer */
+
+#folders span {
+    margin: 0px 0px 0px 10px;
+}
+
+/* Folder buttons text*/
+
+#folders span a,
+#folders span a font {
+    color: #E7E7E7;
+    font-size: 12px;
+}
+
+/* Folder buttons MouseOver */
+
+#folders span a:hover,
+#folders span a:hover font {
+    border-bottom: 1px solid #999;
+    color: #FFD718;
+}
+
+/* Inbox new mail counter text */
+
+#folders span small,
+#folders span small a {
+    color: #FFD718;
+    font-size: 10px;
+}
+
+/* "Purge" text MouseOver */
+
+#folders span small a:hover {
+    color: #E7E7E7;
+}
+
+/* Subfolder Spacing */
+
+#folders span tt {
+    font-size: 0px;
+    margin: 0px 5px 0px 40px;
+}
+
+/* This is a spacer under Today's Mail Summary
+ * It's disabled by default */
+
+#folders_bottom {
+    display: none;
+}
+
+/* 
+ * ========================================
+ * "Today's Mail Summary" plugin Elements
+ * ========================================
+ */
+
+/* In order to see the changes applies, the !important tag must be used 
+ * This is a temporary solution for MagicMail version 1.0.4.6-1
+ * The !important tag can be removed for future versions of MagicMail
+ */
+
+/* Container for the "Today's Mail Summary" plugin */
+
+/* The margins here really should be auto, but IE doesn't support it
+ * so the temporary solution is to use a margin of 7px */
+
+#MailSummary {
+    background: transparent !important;
+    border: 1px solid #999 !important;
+    margin: 15px 7px 0px 7px !important;
+    width: 220px !important;
+    position: relative;
+}
+
+/* Ignored by IE */
+
+td>#MailSummary {
+    width: 85%;
+}
+
+/* Title Text */
+
+#MailSummary h4 {
+    background: transparent !important;
+    border: 0 !important;
+    border-bottom: 1px dotted #6E89A0 !important;
+    color: #FFF !important;
+    display: block !important;
+    font-size: 12px !important;
+    font-weight: bold;
+    margin: 0px 0px 8px 0px !important;
+    padding: 3px 3px 0px 8px !important;
+    text-align: center !important;
+    text-transform: capitalize;
+}
+
+/* Popup Menu for the MailSummary 
+ * NOTE: This isn't used in MagicMail version 1.0.4.6-1 and older
+ * You can ignore or remove this
+ */
+
+#MailSummary p.Tooltip {
+    background: #FCFCFC;
+    border: 1px solid #DDD;
+    filter: alpha(opacity=90);
+    font-size: 10px;
+    line-height: 15px;
+    width: 180px;
+    text-align: left;
+    -moz-border-radius: 5%;
+    -moz-opacity: 0.90;
+    padding: 10px;
+    color: #333;
+    top: auto !important;
+    left: -5px !important;
+}
+
+/* Email/Spam/Viruses Button */
+
+/* This also controls the numbers of the statistics */
+
+#MailSummary p.SummaryItem {
+    border: 0px !important;
+    color: #FFD718 !important;
+    font-family: Georgia, Verdana, Arial, Tahoma, sans-serif !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    margin: 0;
+    padding: 4px 10px !important;
+    text-align: right;
+}
+
+/* Email/Spam/Viruses Button MouseOver */
+
+/* NOTE: Because this isn't used in MagicMail version 1.0.4.6-1 and older - cursor is set to auto
+ * Set cursor: help if you want to have this be a button
+ */
+
+#MailSummary p.SummaryItem:hover {
+    background: transparent !important;
+    cursor: auto !important;
+}
+
+/* Email/Spam/Viruses Button Text */
+
+#MailSummary p.SummaryItem strong {
+    color: #DDD !important;
+    display: block;
+    font-family: Verdana, Arial, Tahoma, sans-serif !important;
+    font-size: 12px !important;
+    float: left;
+    text-align: left;
+    width: 80px;
+}
+
+/* 
+ * ========================================
+ * "Mail Quota" Plugin Elements
+ * ========================================
+ */
+
+/* This plugin is currently unavailable */
+
+#quota {
+    float: left;
+    margin-top: 30px;
+    width: 99%;
+}
+
+/*Quota Usage Text */
+
+#folders div font {
+    color: #DDD;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+/*Quota Usage Table */
+
+#folders div font table {
+    background: transparent;
+    border: 0;
+    border-spacing: 0;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+}
+
+/* Available space */
+
+#folders div font table td {
+    background: #FFF;
+    border: 1px solid #444;
+    padding: 0;
+}
+
+/* 
+ * ========================================
+ * Sidebar Calendar Elements
+ * ========================================
+ */
+
+/* Sidebar "Calendar" Title Container*/
+
+/* This is hidden by default */
+
+#cal_top {
+    display: none;
+    float: left;
+    height: 20px;
+    margin: 3px 0px 20px 0px;
+    width: 100%;
+}
+
+/* Sidebar "Calendar" Title*/
+
+#cal_top p {
+    border-bottom: 1px dotted #6E89A0;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+/* Sidebar Calendar Container */
+
+/* The margin here should really be auto, but IE doens't
+ * support that, so the temporary solution is to use 21px */
+
+#cal {
+    clear: both;
+    margin: 0px 21px;
+    width: 200px;
+}
+
+/* Sidebar Calendar Outline */
+
+#cal table.left_mailbox {
+    border: 1px solid #2951A6;
+    margin: 0px auto;
+}
+
+/*Sidebar Calendar Header*/
+
+#cal tr.cal_nav td {
+    background: transparent url('../images/calendar-header.gif');
+    border: 0;
+    padding: 3px 0px 0px 0px;
+}
+
+/*Sidebar Calendar Header >> and << Buttons*/
+
+#cal .cal_nav a {
+    color: #111;
+    font-size: 9px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/*Sidebar Calendar Header >> and << Buttons MouseOver*/
+
+#cal .cal_nav a:hover {
+    color: #2951A6;
+    text-decoration: underline !important;
+}
+
+/*Sidebar Calendar Month Header*/
+
+#cal .calendarHeader {
+    border-left: 1px solid #EBE7E7;
+    border-right: 1px solid #EBE7E7;
+    color: #026;
+    height: 26px;
+    font-size: 14px !important;
+    font-weight: bold;
+}
+
+/*Sidebar Calendar Month Header MouseOver*/
+
+#cal .calendarHeader a:hover {
+    color: #444;
+    text-decoration: underline !important;
+}
+
+/*Sidebar Calendar Days of the Week (S, M, T, W, etc...)*/
+
+#cal .day {
+    background: transparent url('../images/calendar-day.gif');
+    border: 1px solid #2975BD;
+    color: #FFF;
+    font-size: 11px;
+    font-weight: bold;
+    height: 16px;
+    padding: 4px;
+    text-align: center;
+    width: 16px;
+}
+
+/*Sidebar Calendar Days (1, 2, 3, etc...)*/
+
+#cal td.calendar,
+#cal td.calendarEvent {
+    background: #DEDEDE;
+    border: 1px solid #FFF;
+    height: 16px;
+    margin: 0;
+    padding: 2px;
+    text-align: center;
+    vertical-align: middle;
+    width: 16px;
+}
+
+/*Sidebar Calendar Days (1, 2, 3, etc...) MouseOvers*/
+
+#cal td:hover.calendar,
+#cal td:hover.calendarEvent {
+    background: #FFF;
+    border: 1px solid #EEE;
+}
+
+/*Sidebar Calendar Days Text*/
+
+#cal a.calendar,
+#cal td.calendarEvent a {
+    color: #444;
+    font-size: 10px;
+    font-weight: normal;
+}
+
+/*Sidebar Calendar Days (1, 2, 3, etc...) with an event*/
+
+#cal td.calendarEvent a {
+    font-weight: bold;
+}
+
+/*Sidebar Calendar Days Text MouseOver*/
+
+#cal a:hover.calendar {
+    color: #000;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/* This is a spacer under Calendar
+ * It's disabled by default */
+
+#cal_bottom {
+    display: none;
+}
+
+/* SideBar Calendar Today Block */
+
+.calendarToday,
+td.calendarEventToday {
+    background: #FFF;
+    border: 1px solid #444;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* SideBar Calendar Today Block Text*/
+
+.calendarToday a,
+td.calendarEventToday a {
+    color: #C01C1B;
+    font-size: .8em;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* 
+ * ========================================
+ * Sidebar Options Elements
+ * ========================================
+ */
+
+/* Sidebar Options Title Container*/
+
+#extra_top {
+    display: none;
+    float: left;
+    height: 20px;
+    margin: 3px 0px 0px 0px;
+    width: 100%;
+}
+
+/* Sidebar Options Title*/
+
+#extra_top p {
+    border-bottom: 1px dotted #6E89A0;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+/* Sidebar Options Container */
+
+#extra {
+    clear: both;
+    width: 100%;
+}
+
+/* Sidebar Options Text*/
+
+#options p {
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+/* Sidebar Options Table Container */
+
+#extra table {
+    width: 100% !important;
+}
+
+/* Sidebar Options Button Arrows */
+
+#extra img {
+    margin: 2px 10px 0px 5px;
+}
+
+/* Sidebar Options Text Buttons */
+
+#extra a {
+    color: #DDD;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Sidebar Options Text Button MouseOvers */
+
+#extra a:hover {
+    border-bottom: 1px solid #FFD718;
+    color: #FFD718;
+}
+
+/* This is a spacer under Calendar
+ * It's disabled by default */
+
+#extra_bottom {
+    display: none;
+}
+
+/* "Powered by MagicMail" icon
+ * Disabled by default because it causes strange scrollbar errors*/
+
+body.left center {
+    display: none;
+}
+
+/* 
+ * ========================================
+ * Calendar Page Elements
+ * ========================================
+ */
+
+/* Calendar Page Body */
+
+table.calhead {
+    background: #F7F7F7;
+    border-bottom: 1px solid #999;
+    border-top: 1px solid #999;
+    padding-top: 4px;
+}
+
+/* Inactive Day Blocks */
+
+table.calhead td {
+    background: #5A5D5A url('../images/background-bottomheader.gif') repeat-x top left;
+    color: #FFF;
+    padding: 0;
+    text-align: center;
+}
+
+/* "Month View" / "Day View" buttons */
+
+table.calhead td a {
+    color: #FFD718;
+    font-size: 12px;
+    line-height: 22px;
+    padding: 0px 4px;
+}
+
+/*  "Month View" / "Day View" buttons MouseOver */
+
+table.calhead a:hover {
+    color: #FFF;
+}
+
+/* Calendar Month Navigation Bar */
+
+table.calhead table th {
+    background: #FFF url('../images/logged_in_as_bar_background.gif') repeat-x top left;
+    border: 1px solid #AAA;
+    color: #2971B5;
+    height: 30px;
+}
+
+/* Calendar Month Navigation Bar Links*/
+
+table.calhead table th a {
+    color: #000;
+}
+
+/* Calendar Month Navigation Bar Links MouseOvers*/
+
+table.calhead table th a:hover {
+    color: #2951A5;
+}
+
+/* Current Month Title */
+
+.calmonth {
+    color: #2F59B5;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Calendar Monday/Tuesday/Wednesday/etc... Headers */
+
+th.calday {
+    background: #185184 url('../images/blue_bar_background.gif') repeat-x top left !important;
+    border: 1px solid #2971B5 !important;
+    color: #FFF !important;
+    font-size: .8em;
+    font-weight: bold;
+    height: 25px;
+}
+
+/* Calendar Day Blocks */
+
+table.calhead td table tr td {
+    background: #FFF url('../images/logged_in_as_bar_background.gif') repeat-x top left;
+    border: 1px solid #999;
+    padding: 8px;
+}
+
+table.calhead td table tr td {
+    color: #000;
+}
+
+/* Calendar Day Blocks MouseOver*/
+
+table.calhead td table tr td:hover {
+    background: #E7DFE7 url('../images/button_background.gif') repeat-x top left;
+}
+
+/* Calendar Day Blocks Links*/
+
+table.calhead td div a {
+    color: #2951A5;
+    margin: 8px;
+}
+
+/* Calendar Day Blocks Links Mouseovers*/
+
+table.calhead td div a:hover {
+    color: #000;
+}
+
+/* 
+ * ========================================
+ * Folder Inbox Elements
+ * ========================================
+ */
+
+/* "Toggle All" button container */
+
+.toggle_table {
+    background: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+/* Spacer under the "Toggle" all button */
+
+td.toggle_table {
+    display: none;
+}
+
+/* "Viewing Messages" Text */
+
+.toggle_table td {
+    background: #FFF;
+    font-size: 11px;
+    font-weight: bold;
+    padding-left: 4px;
+}
+
+/* "Toggle All" Text */
+
+.toggle_table td a {
+    font-weight: normal;
+}
+
+/* "Viewing Messages" Numbers Text*/
+
+.toggle_table td b {
+    color: #2951A6;
+}
+
+/* Container for the Move/Forward/etc buttons */
+
+table.mvfwdl {
+    background: #FFF;
+}
+
+/* "Thread View" text */
+
+.mvfwdl small,
+.mvfwdl a {
+    font-size: 10px;
+    padding-left: 3px;
+}
+
+/* Move/Forward/Read/etc buttons */
+
+.move_button,
+.forward_button,
+.read_button,
+.unread_button,
+.flag_button,
+.unflag_button,
+.delete_button {
+    background: transparent url('../images/button_background.gif') bottom repeat-x;
+    border: 1px solid #9D9D9D !important;
+    font-size: 10px;
+    font-weight: normal;
+    margin: 2px 2px 0px 2px;
+    padding: 2px 4px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.move_button:hover,
+.forward_button:hover,
+.read_button:hover,
+.unread_button:hover,
+.flag_button:hover,
+.unflag_button:hover,
+.delete_button:hover {
+    background: transparent url('../images/button_background_over.gif') bottom repeat-x;
+    color: #184973;
+}
+
+.delete_button {
+    font-weight: bold;
+}
+
+/* From/Date/Subject Bar */
+
+.current_folder {
+    background: #183973 url(../images/blue_bar_background.gif) repeat-x;
+    color: #FFF;
+    padding: 1px 1px;
+}
+
+/* Links of Email Messages Forced height */
+
+.messages_table td {
+    padding: 0px 1px !important;
+}
+
+/* Links of Email Messages Text */
+
+.messages_table a {
+    color: #184973;
+}
+
+/* Links of Email Messages Text MouseOvers*/
+
+.messages_table a:hover {
+    color: #222;
+}
+
+/* Envelope, attach, flag icons */
+
+.msg-icon,
+.msg-attach,
+.msg-flagged {
+    padding: 0px 2px;
+}
+
+/* 
+ * ========================================
+ * Email View Elements
+ * ========================================
+ */
+
+/* Email View Submenu (All Msgs/Delete/Back/Forward/etc...) */
+
+table.read_icon_bar {
+    background: #2669A3 url('../images/read-icon-bar.gif') repeat-x top left !important;
+    border-bottom: 1px solid #999;
+    border-top: 1px solid #999;
+    height: 30px;
+    padding: 0;
+}
+
+table.read_icon_bar tbody tr td {
+    background: transparent !important;
+    /* FF Fix */
+}
+
+/* Email View Submenu Links */
+
+.read_icon_bar a {
+    color: #FFF;
+    font-size: 11px;
+}
+
+/* Email View Submenu Links MouseOvers */
+
+.read_icon_bar a:hover {
+    color: #FFD718;
+}
+
+/* Turn this on if you want the message body to be display correctly in 800x600
+.read_icon_bar small a img {
+    display: none;
+}
+*/
+
+/* Hidden "Next" and "Previous" buttons. Enable this if you want these buttons to be images */
+
+/* This feature has not yet been implemented, but should be release in MagicMail version 1.0.5.0 */
+
+/*
+.link_previous IMG,
+.link_previous img,
+.link_previous_grey IMG,
+.link_previous_grey img,
+.link_next IMG,
+.link_next img,
+.link_next_grey IMG,
+.link_next_grey img {
+    display: none;
+}
+a .link_previous,
+a .link_next {
+    font-weight: bold;
+    color: #444;
+}
+*/
+
+/* Email Message Headers (Subject/From/Date/etc...) */
+
+.messageinfo_table {
+    background: #F2F2F2;
+    border-bottom: 4px solid #DDD;
+    border-top: 4px solid #DDD;
+    padding: 10px 0px;
+}
+
+.messageinfo_table tbody tr td b {
+    color: #2951A5 !important;
+}
+
+/* (View Full Header/View Printable Version/etc...) Options Links */
+
+.messageinfo_table a {
+    font-size: 11px;
+}
+
+/* The Main Body of the Email Message*/
+
+.mailmessage_table td {
+    background: #FFF;
+    border-bottom: 4px solid #EEE;
+    border-top: 4px solid #EEE;
+}
+
+/* The Email Text Body */
+
+.mailmessage_table td table td {
+    border: 0px;
+}
+
+/* The Email Text */
+
+.mailmessage_table pre {
+    color: #000;
+    font-size: 13px;
+}
+
+/* 
+ * ========================================
+ * MagicScan Page
+ * ========================================
+ */
+
+#magicscan {
+    margin-left: 20px;
+}
+
+#magicscan a {
+    border-bottom: 1px dotted #AAA;
+    color: #2951A5;
+    font-size: 12px;
+}
+
+#magicscan a:hover {
+    border-bottom: 1px dotted #999;
+    color: #000;
+}
+
+/* 
+ * ========================================
+ * Login / Logout Page Elements
+ * ========================================
+ */
+
+/* Logo at the top of the page */
+
+/* To customize this, change the themes/skins/yourtheme/corporate_logo.gif image*/
+
+/*#login_logo {*/
+/*    background: transparent url('../images/corporate_logo.gif') no-repeat top center;*/
+/*    height: 78px;*/
+/*    margin: 80px auto 0px auto;*/
+/*    width: 390px;*/
+/*}*/
+
+/* Container for the Login Box */
+
+#login_container {
+    background: transparent url('../images/magicmailseven_login.jpg') no-repeat top center;
+    border: 0;
+    height: 229px;
+    margin: 10px auto 0px auto;
+    padding: 20px;
+    text-align: center;
+    width: 444px;
+}
+
+/* Top Header "Webmail Login" text */
+
+#login_header {
+    color: #184973;
+    font-size: 16px;
+}
+
+/* Secondary Header text */
+
+#login_header2 {
+    color: #444;
+    font-size: 14px;
+}
+
+/* Input Form Container */
+
+#login_fieldset {
+    border: 0px;
+    margin: 0px auto;
+    padding: 10px;
+    width: 250px;
+}
+
+/* Input Form Text */
+
+#login_fieldset font {
+    clear: both;
+    float: left;
+    padding: 6px 0px;
+    text-transform: capitalize;
+}
+
+/* Input Field */
+
+.login_input {
+    background: #FFF;
+    border: 1px solid #999;
+    float: right;
+    margin: 5px 0px;
+}
+
+/* Input Field "Login" Button */
+
+#login_fieldset p {
+    clear: both;
+    float: right;
+    text-transform: capitalize;
+}
+
+/* Input Field "Login" Button Text*/
+
+input.login_button {
+    text-transform: capitalize;
+}
+
+input:focus.login_input {
+    border: 1px solid #333;
+}
+
+#login_fieldset center {
+    border-top: 1px solid #EFEFEF;
+    /* Fix for Firefox 1.5.x */
+}
+
+/* "Remember My Name & Password" Text Container*/
+
+#login_fieldset center table {
+    clear: both;
+    font-size: 11px;
+}
+
+/* Copyright Message at the bottom of the page */
+
+#login_copyright font {
+    display: none;
+}
+
+/* 
+ * ========================================
+ * Anti-Spam and Email Settings Pages
+ * ========================================
+ */
+
+/* Main Content Table */
+
+table.MagicEmbeddedTable {
+    margin: 0px auto;
+}
+
+/* Main Content Table Headers */
+
+table.MagicEmbeddedTable th,
+table.MagicEmbeddedTable tbody tr.wizHeaderTable th {
+    background: url('../images/logged_in_as_bar_background.gif') repeat-x top left;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Main Content Table Cells*/
+
+table.MagicEmbeddedTable tbody tr td {
+    padding: 10px;
+}
+
+/* My Email Options > Forwarding Table */
+
+table#forwarding ul {
+    list-style: none;
+}
+
+/* 
+ * ========================================
+ * CSS 3 Form Styles
+ * ========================================
+ */
+
+/* IMPORTANT NOTE PLEASE READ
+ *
+ * This is an experimental section which may conflict and destroy the look of the page
+ * for older browsers. If you are experiencing rendering problems. Remove this entire
+ * section.
+ *
+ * However, if you are using CSS3 compliant browsers (such as Firefox 2.0+), this section 
+ * will make the appearance of your webmail interface look a lot smoother and more attractive
+ */
+
+input[type=text] {
+    border: 1px solid #AAA;
+}
+
+input[type=text]:focus {
+    border: 1px solid #555;
+}
+
+/* Buttons */
+
+input[type=button],
+input[type=submit] {
+    background: transparent url('../images/button_background.gif') bottom repeat-x;
+    border: 1px solid #999;
+}
+
+/* Buttons Hover*/
+
+input:hover[type=button],
+input:hover[type=submit] {
+    background: transparent url('../images/button_background_over.gif') bottom repeat-x;
+    border: 1px solid #888;
+    cursor: pointer;
+    cursor: hand;
+    /* IE Fix */
+}
+
+/* Main Page Tables */
+
+body.right>table {
+    width: 100%;
+}
+
+/* Options Page Tables Headers */
+
+body.right>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr>td[bgcolor="#ABABAB"] {
+    background: #EEE url('../images/calendar-header.gif') top repeat-x;
+    border: 1px solid #CCC;
+}
+
+/* Options Page Tables Headers MouseOver*/
+
+body.right>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr>td:hover[bgcolor="#ABABAB"] {
+    background: #EEE url('../images/logged_in_as_bar_background.gif') top repeat-x;
+}
+
+/* Options Page Tables Header Titles */
+
+body.right>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr>td[bgcolor="#ABABAB"]>a {
+    border-left: 4px solid #EEE;
+    color: #2951A5;
+    font-size: 12px;
+    line-height: 18px;
+    padding: 0px 4px;
+}
+
+/* Options Page Tables Header Titles MouseOvers*/
+
+body.right>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr>td[bgcolor="#ABABAB"]>a:hover {
+    border-left: 4px solid #2951A5;
+    color: #000;
+}
+
+/* Options Page Tables Bodies */
+
+body.right>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr>td[bgcolor="#DCDCDC"] {
+    background: #F7F7F7;
+    border: 1px solid #DDD;
+    border-top: 0px;
+    color: #444;
+    padding: 10px;
+}
+
+/* Page Table Headers */
+
+body.right>table>tbody>tr>td[align=center] {
+    background: transparent url('../images/blue_bar_background.gif') top repeat-x;
+    padding: 0px;
+    /*Removes the border */
+    text-align: left;
+}
+
+/* Page Table Headers Links*/
+
+body.right>table>tbody>tr>td[align=center]>a {
+    color: #FFD718;
+    line-height: 20px;
+    padding: 0px 0px 0px 8px;
+}
+
+/* Page Table Headers Links MouseOvers*/
+
+body.right>table>tbody>tr>td[align=center]>a:hover {
+    color: #FFF;
+}
+
+/* Page Table Headers (SpellCheck Page Fix)*/
+
+body.right>table>tbody>tr>td[bgcolor="#ABABAB"][align=center] {
+    background: #FFF;
+    padding: 0px;
+    /*Removes the border */
+    text-align: left;
+}
+
+/* Page Table Headers (SpellCheck Page Fix 2) */
+
+/*
+ * THIS NEEDS MORE WORK
+ */
+
+body.right>table>tbody>tr>td[bgcolor="#ABABAB"][align=center]>strong {
+    color: #000;
+    padding: 0px;
+    /*Removes the border */
+    text-align: left;
+}
+
+/* Folders Page Tables Headers */
+
+body.right>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr>td[bgcolor="#ABABAB"] {
+    background: #EEE url('../images/calendar-header.gif') top repeat-x;
+    border: 1px solid #CCC;
+    padding: 2px 0px;
+}
+
+/* Folders Page Tables Headers Text*/
+
+body.right>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr>td[bgcolor="#ABABAB"]>b {
+    color: #2951A5 !important;
+    font-size: 12px;
+    padding: 0px 4px;
+}
+
+/* Folders Page Tables Bodies */
+
+body.right>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr>td[bgcolor="#DCDCDC"] {
+    background: #F7F7F7;
+    border: 1px solid #DDD;
+    border-top: 0px;
+    color: #444;
+    padding: 10px;
+}
+
+/* Addresses Page Form Table */
+
+body.right>table,
+body.right>form>table {
+    border: 0;
+    border-spacing: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* Addresses Page Form Table Cell Spacing*/
+
+body.right>form>table>tbody>tr>td[bgcolor="#FFFFFF"] {
+    font-weight: bold;
+    padding-top: 8px;
+}
+
+/* Addresses Page Form Table Cell Spacing*/
+
+body.right>form>table>tbody>tr>td[bgcolor="#FFFFFF"]>small {
+    color: #444;
+    font-size: 10px;
+    font-weight: normal;
+}
+
+/* Addresses Page Table Header */
+
+body.right>form>table>tbody>tr>td[bgcolor="#DCDCDC"] {
+    background: transparent url('../images/blue_bar_background.gif') top repeat-x;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+}
+
+/* Addresses Page Table Header Text */
+
+body.right>form>table>tbody>tr>td[bgcolor="#DCDCDC"]>strong {
+    color: #FFF !important;
+    font-size: 11px;
+    line-height: 20px;
+    padding: 0px 4px;
+}
+
+/* Addresses Titles Headers*/
+
+body.right>form>table[width="90%"]>tbody>tr[bgcolor="#ABABAB"] {
+    background: #FFF url('../images/logged_in_as_bar_background.gif') repeat-x top left;
+}
+
+/* Addresses Titles Headers Text*/
+
+body.right>form>table[width="90%"]>tbody>tr[bgcolor="#ABABAB"]>th {
+    border-bottom: 1px solid #999;
+    border-left: 1px solid #999;
+    color: #444;
+    font-size: 11px;
+    line-height: 18px;
+    padding-left: 8px;
+}
+
+/* Addresses Titles Headers First Row*/
+
+body.right>form>table[width="90%"]>tbody>tr[bgcolor="#FFFFFF"]>td[width="1%"] {
+    background: #FFF;
+    border-bottom: 1px solid #CCC;
+    border-left: 1px solid #CCC;
+    line-height: 20px;
+}
+
+/* Addresses Titles Headers Secondary Row*/
+
+body.right>form>table[width="90%"]>tbody>tr[bgcolor="#EDEDED"]>td[width="1%"] {
+    background: #EEE;
+    border-bottom: 1px solid #CCC;
+    border-left: 1px solid #CCC;
+    line-height: 20px;
+}
+
+/* Addresses Titles Email Links*/
+
+body.right>form>table[width="90%"]>tbody>tr>td>a {
+    color: #2951A5;
+}
+
+/* Addresses Titles Email Links MouseOver*/
+
+body.right>form>table[width="90%"]>tbody>tr>td>a:hover {
+    color: #000;
+}
+
+/* Addresses Page "Add Address" Button*/
+
+body.right>p[align="center"]>a[href="#AddAddress"] {
+    background: transparent url('../images/button_background.gif') bottom repeat-x;
+    border: 1px solid #999;
+    color: #2951A5;
+    padding: 8px 16px;
+}
+
+/* Addresses Page "Add Address" Button Mouseover*/
+
+body.right>p[align="center"]>a:hover[href="#AddAddress"] {
+    background: transparent url('../images/button_background_over.gif') top repeat-x;
+    color: #000;
+}
+
+/* Compose Page Alignment */
+
+body.right>form>table>tbody>tr>td[bgcolor="#FFFFFF"][width="10%"] {
+    width: 32%;
+}
+
+/* Compose Page Alignment for Textbox*/
+
+body.right>form>table>tbody>tr>td[bgcolor="#FFFFFF"][colspan="2"] {
+    text-align: center;
+}
+
+/* Compose Page Alignment for Submit Button*/
+
+body.right>form>table>tbody>tr>td[align="right"][colspan="2"] {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Compose Page Attachment Bar*/
+
+body.right>form>table>tbody>tr>td>table[bgcolor="#ABABAB"] {
+    background: transparent;
+    border: 0;
+    border-spacing: 0;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* Compose Page Attachment Bar*/
+
+body.right>form>table>tbody>tr>td>table[bgcolor="#ABABAB"]>tbody>tr>td {
+    background: #185184 url('../images/blue_bar_background.gif') top repeat-x;
+    line-height: 100px;
+}
+
+/* Compose Page Attachment Bar Text*/
+
+body.right>form>table>tbody>tr>td>table[bgcolor="#ABABAB"]>tbody>tr>td>table[width="100%"]>tbody>tr>td {
+    color: #FFF;
+    padding-left: 20%;
+}
+
+/* Page Table HRs*/
+
+body.right>table>tbody>tr>td>hr {
+    display: none;
+}
+
+/* Page Table Header Text*/
+
+body.right>table>tbody>tr>td[align=center] b,
+body.right>table>tbody>tr>td[align=center] strong {
+    color: #FFF;
+    font-size: 11px;
+    line-height: 20px;
+    padding: 0px 4px;
+}
+
+/* Calendar Page Header*/
+
+table.calhead>tbody>tr>td {
+    background: #185184 url('../images/blue_bar_background.gif') repeat-x top left;
+}
+
+/* Calendar Page Header Day View Spacer Remover */
+
+table.calhead>tbody>tr>td>table {
+    border-spacing: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Calendar Page Header Day View Row 1*/
+
+table.calhead>tbody>tr>td>table>tbody>tr[bgcolor="#FFFFFF"]>td {
+    background: #FFF url('../images/logged_in_as_bar_background.gif') repeat-x top left;
+    border: 0px;
+    border-left: 1px solid #DDD;
+    color: #000;
+}
+
+/* Calendar Page Header Day View Row 2*/
+
+table.calhead>tbody>tr>td>table>tbody>tr[bgcolor="#DCDCDC"]>td {
+    background: #E7DFE7 url('../images/button_background.gif') repeat-x top left;
+    border-bottom: 1px solid #AAA;
+    border-left: 1px solid #DDD;
+    border-top: 1px solid #AAA;
+    color: #000;
+}
+
+/* Calendar Page Header Day View Links (ADD button)*/
+
+table.calhead>tbody>tr>td>table>tbody>tr[bgcolor="#FFFFFF"]>td>font>a,
+table.calhead>tbody>tr>td>table>tbody>tr[bgcolor="#DCDCDC"]>td>font>a {
+    color: #2951A5;
+}
+
+/* Calendar Page Header Day View Links (ADD button) MouseOvers*/
+
+table.calhead>tbody>tr>td>table>tbody>tr[bgcolor="#FFFFFF"]>td>font>a:hover,
+table.calhead>tbody>tr>td>table>tbody>tr[bgcolor="#DCDCDC"]>td>font>a:hover {
+    color: #000;
+}
+
+/* Calendar Page Header Add Page Backgrounds*/
+
+table.calhead>tbody>tr>td>table>tbody>tr>td[colspan="2"] {
+    background: #FFF url('../images/button_background_over.gif') top repeat-x;
+    border-bottom: 1px solid #999;
+    color: #000;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 4px;
+}
+
+/* Calendar Page Header Add Page Backgrounds*/
+
+table.calhead>tbody>tr>td>table>tbody>tr>td[bgcolor="#FFFFFF"] {
+    background: #FFF;
+    border: 0;
+    color: #000;
+}
+
+/* "Remember My Name & Password" Text Container*/
+
+#login_fieldset center table[border="0"] {
+    /* Fix for Firefox */
+    margin-top: -20px;
+}

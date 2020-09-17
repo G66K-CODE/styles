@@ -1,0 +1,205 @@
+/*
+ * =============================
+ * Options Pages
+ * ==============================
+ */
+
+/* copied from abook2_opt.css */
+
+#AbookOptions {
+    line-height: 150%;
+    margin: 0 8px 0 auto;
+}
+
+/* Webmail Rewrite */
+
+.right {
+    float: none;
+}
+
+.right #AbookOptions {
+    float: none;
+    margin: 10px;
+}
+
+.right .Aliases .minibutton {
+    display: none;
+}
+
+.width-750 {
+    width: 750px;
+}
+
+#AbookOptions table.MagicDataTable td.success,
+#AbookOptions table td.error {
+    padding: 8px;
+}
+
+#AbookOptions .Description {
+    color: #343434;
+    margin: 8px;
+    padding: 0;
+    text-align: justify;
+    width: auto;
+}
+
+#AbookOptions table {
+    background: #F9F9F9 url(../../../pics/background-mailbox.gif) repeat-x;
+    border: 1px solid #999;
+    border-spacing: 0;
+    margin: 0 auto 8px !important;
+    -moz-border-radius: 4px;
+    padding: 0;
+    -webkit-border-radius: 4px;
+    width: 98% !important;
+    border-radius: 4px;
+}
+
+#AbookOptions table.optionsmenu {
+    background-image: none;
+    background-color: transparent;
+}
+
+#AbookOptions table th {
+    background: #DEDEDE url(../../../pics/background-mailboxheader.gif) repeat-x;
+    border-bottom: 1px solid #999;
+    color: #343434;
+    -moz-border-radius: 4px 4px 0 0;
+    padding: 0;
+    position: relative;
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+}
+
+#AbookOptions table th ul {
+    border: 1px solid #FFF;
+    height: 18px;
+    list-style: none;
+    margin: 0;
+    -moz-border-radius: 4px;
+    padding: 1px 0;
+    position: relative;
+    -webkit-border-radius: 4px;
+    width: auto;
+}
+
+#AbookOptions table th ul li {
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 18px;
+    padding: 0;
+    text-align: center;
+    text-indent: 22px;
+    white-space: nowrap;
+}
+
+#AbookOptions table.Aliases tr td b {
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 18px;
+    padding: 0;
+    text-align: center;
+    text-indent: 22px;
+    white-space: nowrap;
+    display: block;
+}
+
+#AbookOptions table.Aliases tr td[align=center] {
+    background: #dedede url("../../../pics/background-mailboxheader.gif") repeat-x scroll 0 0;
+}
+
+#AbookOptions table th ul li.helplink {
+    cursor: auto;
+    margin: 0 !important;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+}
+
+#AbookOptions table th ul li.helplink {
+    cursor: auto;
+    margin: 0 !important;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+}
+
+#AbookOptions table th ul li.helplink a {
+    background: url(../../../pics/helpicon.gif) no-repeat;
+    border: 0;
+    cursor: help;
+    display: block;
+    height: 12px;
+    font-size: 0;
+    padding: 0;
+    width: 12px;
+}
+
+#AbookOptions table th ul li.helplink a:hover {
+    opacity: 0.7;
+}
+
+#AbookOptions table td {
+    padding: 0px 4px;
+}
+
+#AbookOptions table td.categorydata {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#AbookOptions table td.header {
+    background: #848484 url(../../../pics/subheader.gif) repeat-x;
+    border-bottom: 1px solid #B3B3B3;
+    color: #FFF;
+    font-size: 12px;
+    font-weight: normal;
+    padding: 2px 6px;
+}
+
+#AbookOptions table td.header a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+#AbookOptions table.Aliases td {
+    padding: 3px 6px;
+    border-bottom: 1px solid #DBDBDB;
+}
+
+#AbookOptions table.Aliases td.header {
+    padding: 2px 6px;
+}
+
+#AbookOptions table.abook2_fields_toggle colgroup.field {
+    width: 50%;
+}
+
+#AbookOptions #ForwardLine,
+#AbookOptions #CopyLine {
+    padding: 0 10px;
+}
+
+#AbookOptions #CopyLine {
+    margin-top: -3px;
+}
+
+#AbookOptions #CopyLine input {
+    top: 0;
+}
+
+#AbookOptions #forwarding ul.listofforwards {
+    list-style: none;
+    margin: 16px 16px 0;
+    padding: 0;
+}
+
+#AbookOptions #forwarding .listheader {
+    font-weight: bold;
+}
+
+#AbookOptions #forwarding .listofforwards li {
+    border-bottom: 1px solid #DDD;
+    font-size: 12px;
+    padding: 2px 0;
+}

@@ -1,0 +1,527 @@
+/* -----------------------------------------------------------------------
+
+MagicMail Server CSS (2.1)
+Component: Email Options
+http://magicmail.linuxmagic.com/
+
+Copyright: 2010-2013 Wizard IT Services, All Rights Reserved
+All style attributes in alpha-numeric order starting from 0
+
+----------------------------------------------------------------------- */
+
+/* Requires the mm_modal CSS, not sure the effect on webmail, shared base? */
+
+@import "modal.css";
+#EmailOptions {
+    line-height: 150%;
+    width: 750px;
+}
+
+/* Webmail Rewrite */
+
+.right {
+    float: none;
+}
+
+.right #EmailOptions {
+    float: none;
+    margin: 10px;
+    width: 750px;
+}
+
+.right .Aliases .minibutton {
+    display: none;
+}
+
+#EmailOptions .Description {
+    color: #343434;
+    margin: 8px 0 9px 10px;
+    padding: 0;
+    text-align: justify;
+    width: auto;
+}
+
+#EmailOptions>h2 {
+    margin-left: 10px;
+}
+
+#EmailOptions table th ul li.helplink {
+    cursor: auto;
+    margin: 0 !important;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+}
+
+#EmailOptions table th ul li.helplink a,
+#EmailOptions table li a.helplink {
+    background: url(../pics/helpicon.gif) no-repeat;
+    border: 0;
+    cursor: help;
+    display: block;
+    height: 12px;
+    font-size: 0;
+    padding-bottom: 2px;
+    width: 12px;
+}
+
+#EmailOptions table li a.helplink {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#EmailOptions table th ul li.helplink a:hover,
+#EmailOptions table li a.helplink:hover {
+    opacity: 0.7;
+}
+
+#EmailOptions table.Aliases td {
+    padding: 3px 6px;
+    border-bottom: 1px solid #DBDBDB;
+}
+
+#EmailOptions table.Aliases td.header {
+    padding: 2px 6px;
+}
+
+#EmailOptions #ForwardLine,
+#EmailOptions #CopyLine {
+    padding: 0 10px;
+}
+
+#EmailOptions #CopyLine {
+    margin-top: 5px;
+}
+
+#EmailOptions #CopyLine input {
+    top: 0;
+}
+
+#EmailOptions #forwarding ul.listofforwards {
+    list-style: none;
+    margin: 16px 16px 0;
+    padding: 0;
+}
+
+#EmailOptions #forwarding .listheader {
+    font-weight: bold;
+}
+
+#EmailOptions #forwarding .listofforwards li {
+    border-bottom: 1px solid #DDD;
+    font-size: 12px;
+    padding: 2px 0;
+}
+
+#EmailOptions #forwarding .listofforwards li small a {
+    font-size: 11px !important;
+    font-weight: normal !important;
+    text-decoration: none;
+}
+
+#EmailOptions .listofforwards #forwardadd li {
+    border: 0;
+}
+
+#EmailOptions .listofforwards #forwardadd li input {
+    border: 1px solid #AAA;
+}
+
+#EmailOptions .listofforwards #forwardadd li input:focus {
+    border: 1px solid #555;
+}
+
+/* temporary override to bypass deleterious effects of Webmail Lite skins.
+   Schedule for removal / cleanup after Webmail Lite is retired  */
+
+#EmailOptions table {
+    border: 1px solid #999;
+}
+
+#EmailOptions table.ChangePassword,
+#EmailOptions table.VacationMsg {
+    background: #FFF url(../pics/tablebg.gif) repeat-x;
+}
+
+/* Separation between the checkbox and 'Update Vacation Message' button */
+
+#EmailOptions table.vacationMsg input#vacationbox {
+    margin-right: 10px;
+}
+
+/* Update Vacation Message button should be floated right */
+
+#EmailOptions table.vacationMsg td:last-child div.minibutton {
+    float: right;
+}
+
+#EmailOptions table.ChangePassword td label {
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+#EmailOptions table.ChangePassword td .pass_input,
+#EmailOptions table.VacationMsg td .vacinput,
+#EmailOptions table.VacationMsg td .vactext {
+    background: #FFF url(../pics/input.gif) repeat-x;
+    border: 1px solid #999;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    width: 100%;
+}
+
+#EmailOptions table.ChangePassword td .pass_input {
+    width: 110px
+}
+
+#EmailOptions table.ChangePassword td input.pass_input:focus,
+#EmailOptions table.VacationMsg td .vacinput:focus,
+#EmailOptions table.VacationMsg td .vactext:focus {
+    background: #EBE6D7;
+}
+
+#EmailOptions table.ChangePassword td small {
+    font-weight: bold;
+}
+
+#EmailOptions table.ChangePassword #UpdatePassword {
+    padding: 2px 0 4px;
+}
+
+#EmailOptions td .minibutton {
+    float: left;
+}
+
+#EmailOptions td .minibutton.right {
+    float: right;
+}
+
+#EmailOptions table.ChangePassword #UpdatePassword .minibutton {
+    float: right;
+    margin: 0 4px 0 0;
+}
+
+#EmailOptions td .minibutton a {
+    color: #2951A5;
+    font-weight: normal;
+}
+
+#EmailOptions table.VacationMsg th .disabled {
+    color: #777;
+}
+
+#EmailOptions table.VacationMsg th .enabled {
+    color: #4A9210;
+}
+
+#EmailOptions table.VacationMsg label {
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+#EmailOptions table.VacationMsg label span {
+    font-size: 10px;
+}
+
+#EmailOptions table.VacationMsg #EnableVacation {
+    vertical-align: top;
+}
+
+#EmailOptions table.VacationMsg .minibutton {
+    margin: 0 0 4px;
+}
+
+#EmailOptions table.VacationMsg .vacationDate {
+    width: 100%;
+}
+
+#EmailOptions table.VacationMsg .vacationDateLabel {
+    display: inline-block;
+    width: 40%;
+}
+
+#EmailOptions table.VacationMsg .vacationDateSelector {
+    display: inline-block;
+    width: 50%;
+}
+
+.vacationDateSelector>input {
+    width: 200px;
+}
+
+.country-list {
+    width: 300px;
+    height: 300px;
+}
+
+#EmailOptions table label>input[type="radio"] {
+    position: relative;
+    top: 5px;
+}
+
+.vlalign-top {
+    vertical-align: top;
+}
+
+.vlalign-bottom {
+    vertical-align: bottom;
+}
+
+.padding-left {
+    padding-left: 15px;
+}
+
+.col-width-100 {
+    width: 100px;
+}
+
+.padding-top-10,
+#EmailOptions table td.padding-top-10 {
+    padding-top: 10px;
+}
+
+.confirm-password-fix {
+    padding-top: 18px;
+    display: inline-block;
+}
+
+#pagecontent .confirm-password-fix {
+    padding-top: 0;
+}
+
+input[type="password"].no-marging-bottom {
+    margin-bottom: 0;
+}
+
+.col-width-280 {
+    width: 280px;
+}
+
+.row-height {
+    height: 30px;
+}
+
+#country-auth {
+    position: relative;
+}
+
+.country-auth-ul {
+    margin-left: 20px;
+    padding-left: 20px;
+    list-style: none;
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 0px;
+}
+
+.country-auth-ul li {
+    border-bottom: 1px solid #ccc;
+    padding: 3px 5px;
+}
+
+.country-auth-ul li:last-child {
+    border-bottom: none;
+}
+
+.country-auth-countries {
+    width: 44%;
+    display: inline-block;
+    vertical-align: top;
+    max-width: 302px;
+}
+
+.country-auth-add-rm {
+    width: 10%;
+    display: inline-block;
+    position: relative;
+    top: 154px;
+    left: 4px;
+    text-align: center;
+}
+
+.country-auth-add-rm button img {
+    width: 26px;
+}
+
+.minibutton-right,
+#EmailOptions td .minibutton-right,
+table.MagicDataTable td .minibutton.minibutton-right {
+    float: right;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.country-auth-select-top-label,
+.MagicContentCell p.country-auth-select-top-label {
+    font-weight: bold;
+    margin-bottom: 0 !important;
+    padding-bottom: 4px;
+    margin-top: 4px;
+    font-size: 110%;
+}
+
+.text-underline {
+    text-decoration: underline;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.text-green {
+    color: green;
+}
+
+.text-red {
+    color: red;
+}
+
+.small-em {
+    font-size: 80%;
+    font-style: italic;
+}
+
+.country-auth-step2 {
+    clear: both;
+    padding-left: 10px;
+    position: relative;
+}
+
+.country-auth-step1 {
+    margin: 5px 10px;
+    padding: 15px;
+}
+
+.country-auth-step1 label {
+    margin-right: 26px;
+    position: relative;
+    bottom: 3px;
+}
+
+.mm-multiselect {
+    display: block;
+    height: 400px;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    list-style: none;
+    overflow-y: scroll;
+    padding-left: 0;
+}
+
+.mm-multiselect ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.mm-optgroup span {
+    font-weight: bold;
+}
+
+.mm-multiselect li,
+.mm-optgroup span {
+    border-bottom: 1px solid #f1f1f1;
+    display: block;
+    padding: 4px 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mm-optgroup span {
+    cursor: default;
+}
+
+.mm-multiselect>li,
+.mm-optgroup ul>li {
+    cursor: pointer;
+}
+
+.mm-multiselect>li.non-selectable,
+.mm-optgroup ul>li.non-selectable,
+.mm-multiselect>li.non-selectable:hover,
+.mm-optgroup ul>li.non-selectable:hover {
+    cursor: default;
+    color: #ccc;
+}
+
+.mm-multiselect>li:hover,
+.mm-optgroup ul>li:hover {
+    background: #fafafa;
+}
+
+/* Non selectable items */
+
+.mm-multiselect>li.non-selectable:hover,
+.mm-optgroup ul>li.non-selectable:hover,
+.mm-multiselect>li.mm-optgroup:hover {
+    background: none;
+}
+
+.mm-multiselect li.selected {
+    background: #ddd;
+}
+
+.mm-multiselect li.mm-optgroup {
+    padding: 0;
+}
+
+.mm-multiselect li.mm-optgroup li {
+    padding-left: 15px;
+}
+
+.mm-multiselect li:last-child {
+    border-bottom: none;
+}
+
+.country-auth-add-rm .arrow-right {
+    margin-bottom: 10px;
+}
+
+.arrow-right,
+.arrow-left {
+    background-color: #eaeaea;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 70%;
+    width: 48px;
+    height: 28px;
+    border: 1px solid #999;
+    border-radius: 4px;
+}
+
+.arrow-right {
+    background-image: url('../pics/right.png');
+}
+
+.arrow-left {
+    background-image: url('../pics/left.png');
+}
+
+.col-6 {
+    display: inline-block;
+    width: 50%;
+    box-sizing: border-box;
+    float: left;
+}
+
+#country-auth-save-changes {
+    width: 98%;
+    max-width: 691px;
+    text-align: right;
+    margin-top: 14px;
+}
+
+#country-auth-save-changes div.minibutton {
+    float: none;
+}
+
+.hide {
+    display: none;
+}
+
+.fix-position {
+    margin-right: 29px;
+}
+
+.system-enforced {
+    font-style: italic;
+}
